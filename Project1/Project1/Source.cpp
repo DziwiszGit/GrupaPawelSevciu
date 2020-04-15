@@ -2,6 +2,7 @@
 #include "Graphics.h"
 #include "Level1.h"
 #include "GameController.h"
+#include "GameLevel.h"
 
 Graphics* graphics;
 
@@ -13,6 +14,18 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	{
 		switch (wParam)
 		{
+		/*case((VK_LEFT && VK_UP)||(VK_UP&&VK_LEFT)):
+		{
+			Level1::y = Level1::x + 500.f;
+			GameController::Update();
+
+			graphics->BeginDraw();
+
+			GameController::Render();
+
+			graphics->EndDraw();
+			break;
+		}*/
 		case VK_RIGHT:
 		{
 			Level1::change(1);
@@ -48,19 +61,115 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		{
 			Level1::change(3);
 
-			for (int i = 0; i < 2; i++)
+			while(Level1::y!=150)
 			{
-				GameController::Update();
 
+				Level1::y -= 10;
+			
 				graphics->BeginDraw();
 
 				GameController::Render();
 
 				graphics->EndDraw();
+
+			}
+			if (Level1::y == 150)
+			{
+				while (Level1::y != 300)
+				{
+					Level1::y += 10;
+
+					graphics->BeginDraw();
+
+					GameController::Render();
+
+					graphics->EndDraw();
+				}
+			}
+			
+			break;
+		}
+		case 0x5A:
+		{
+			Level1::change(3);
+
+			while (Level1::y != 150)
+			{
+
+				Level1::y -= 10;
+				if (VK_RIGHT)
+				{
+					Level1::x -= 15.0f;
+
+					if (Level1::x >= 800)
+					{
+						Level1::x = 0;
+					}
+				}
+				graphics->BeginDraw();
+
+				GameController::Render();
+
+				graphics->EndDraw();
+
+			}
+			if (Level1::y == 150)
+			{
+				while (Level1::y != 300)
+				{
+					Level1::y += 10;
+
+					graphics->BeginDraw();
+
+					GameController::Render();
+
+					graphics->EndDraw();
+				}
 			}
 
 			break;
 		}
+		case 0x58:
+		{
+			Level1::change(3);
+
+			while (Level1::y != 150)
+			{
+
+				Level1::y -= 10;
+				if (VK_RIGHT)
+				{
+					Level1::x += 15.0f;
+
+					if (Level1::x >= 800)
+					{
+						Level1::x = 0;
+					}
+				}
+				graphics->BeginDraw();
+
+				GameController::Render();
+
+				graphics->EndDraw();
+
+			}
+			if (Level1::y == 150)
+			{
+				while (Level1::y != 300)
+				{
+					Level1::y += 10;
+
+					graphics->BeginDraw();
+
+					GameController::Render();
+
+					graphics->EndDraw();
+				}
+			}
+
+			break;
+		}
+		
 		}
 	}
 	}

@@ -1,14 +1,2 @@
-﻿  GameController.cpp
-  Level1.cpp
-C:\Users\PC\Desktop\new\Project1\Project1\Level1.cpp(52,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\PC\Desktop\new\Project1\Project1\Level1.cpp(52,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Source.cpp
-  SpriteSheet.cpp
-C:\Users\PC\Desktop\new\Project1\Project1\SpriteSheet.cpp(66,30): warning C4244: '=': conversion from 'FLOAT' to 'int', possible loss of data
-C:\Users\PC\Desktop\new\Project1\Project1\SpriteSheet.cpp(67,31): warning C4244: '=': conversion from 'FLOAT' to 'int', possible loss of data
-C:\Users\PC\Desktop\new\Project1\Project1\SpriteSheet.cpp(109,22): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-C:\Users\PC\Desktop\new\Project1\Project1\SpriteSheet.cpp(109,5): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-C:\Users\PC\Desktop\new\Project1\Project1\SpriteSheet.cpp(108,6): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-C:\Users\PC\Desktop\new\Project1\Project1\SpriteSheet.cpp(108,3): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-  Generating Code...
-  Project1.vcxproj -> C:\Users\PC\Desktop\new\Project1\Debug\Project1.exe
+﻿  Source.cpp
+  Project1.vcxproj -> C:\Git\GrupaPawelSevciu\Project1\Debug\Project1.exe

@@ -5,13 +5,13 @@
 
 class Level1: public GameLevel
 {
-	float x;
-	float y;
 	int frame;
 	static inline int temp;
 	SpriteSheet* sprites;
 
 public:
+	static inline float x;
+	static inline float y;
 	static void change(int i)
 	{
 		temp = i;

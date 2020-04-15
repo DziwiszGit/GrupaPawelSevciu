@@ -1,9 +1,9 @@
 #include "GameController.h"
 #include "Graphics.h"
 #include "Level1.h"
-
 void Level1::Load() 
 {
+
 	x = 0.0f;
 	y = 300.0f;
 	frame = 0;
@@ -35,14 +35,7 @@ void Level1::Update()
 			x = 750;
 		}
 	}
-	if (temp == 3)
-	{
-		y -= 150.0f;
-		if (y < 100)
-		{
-			y = 300.0f;
-		}
-	}
+
 	frame++;
 }
 
