@@ -61,6 +61,10 @@ void Character::SinJump_L(Graphics* graphics)
 {
 	while ((Level1::x < (Level1::x + temp)) && Level1::y != 150)
 	{
+		if (Level1::x <= 0)
+		{
+			Level1::x = 800;
+		}
 		Level1::y -= 10;
 		Level1::x -= 5, 5;
 		graphics->BeginDraw();
@@ -72,6 +76,10 @@ void Character::SinJump_L(Graphics* graphics)
 
 	while (Level1::x < (Level1::x + temp) && Level1::y != 300)
 	{
+		if (Level1::x <= 0)
+		{
+			Level1::x = 800;
+		}
 		Level1::y += 10;
 		Level1::x -= 5, 5;
 		graphics->BeginDraw();
@@ -86,6 +94,10 @@ void Character::SinJump_R(Graphics* graphics)
 {
 	while ((Level1::x < (Level1::x + temp)) && Level1::y != 150)
 	{
+		if (Level1::x >= 800)
+		{
+			Level1::x = 0;
+		}
 		Level1::y -= 10;
 		Level1::x += 5, 5;
 		graphics->BeginDraw();
@@ -97,6 +109,10 @@ void Character::SinJump_R(Graphics* graphics)
 
 	while (Level1::x < (Level1::x + temp) && Level1::y != 300)
 	{
+		if (Level1::x >= 800)
+		{
+			Level1::x = 0;
+		}
 		Level1::y += 10;
 		Level1::x += 5, 5;
 		graphics->BeginDraw();
